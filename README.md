@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# 📊 Social Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A social media analytics dashboard built with React, TypeScript and Vite. Displays mock performance data across multiple platforms in a clean dark UI.
 
-Currently, two official plugins are available:
+## Live Demo
+🔗 Coming soon
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Platform cards for Twitter/X, Instagram, YouTube and LinkedIn
+- Follower counts with growth and engagement rates
+- Weekly engagement bar chart showing likes, comments and shares
+- Follower growth line chart over 4 weeks
+- Top performing posts with reach and engagement stats
+- Total followers and average engagement summary in header
+- Clean dark themed UI
 
-## React Compiler
+## Tech Stack
+- React
+- TypeScript
+- Vite
+- Recharts (data visualisation)
+- CSS (custom dark theme)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## TypeScript Concepts Used
+- Interfaces for all data shapes (Platform, TopPost, EngagementData etc)
+- Type annotations on component props
+- import type for type-only imports
+- Union types and unknown type safety for Recharts callbacks
 
-## Expanding the ESLint configuration
+## React Concepts Used
+- Functional components with typed props
+- Array methods (.map, .reduce, .toLocaleString)
+- Props passing data from App down to child components
+- Conditional styling based on data values
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Architecture
+- App.tsx — root component, imports data and passes to child components
+- PlatformCard.tsx — displays a single platform's stats
+- EngagementChart.tsx — weekly bar chart using Recharts
+- GrowthChart.tsx — follower growth line chart using Recharts
+- TopPosts.tsx — top performing posts list
+- mockData.ts — simulated social media data
+- types.ts — all TypeScript interfaces in one place
