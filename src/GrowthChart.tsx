@@ -17,7 +17,7 @@ function GrowthChart({ data }: { data: DataPoint[] }) {
           <Tooltip
             contentStyle={{ background: '#0d1221', border: '1px solid #1e2d4a' }}
             formatter={(value: unknown) => [
-              typeof value === 'number' ? value.toLocaleString() : value,
+              typeof value === 'number' ? value.toLocaleString() : String(value),
               'Followers'
             ]}
           />
