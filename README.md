@@ -3,7 +3,7 @@
 A social media analytics dashboard built with React, TypeScript and Vite. Displays mock performance data across multiple platforms in a clean dark UI.
 
 ## Live Demo
-🔗 (https://kenny-harper-social-dashboard.netlify.app)
+🔗 https://kenny-harper-social-dashboard.netlify.app
 
 ## Features
 - Platform cards for Twitter/X, Instagram, YouTube and LinkedIn
