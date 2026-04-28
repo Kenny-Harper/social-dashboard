@@ -1,9 +1,12 @@
 # 📊 Social Analytics Dashboard
 
-A social media analytics dashboard built with React, TypeScript and Vite. Displays mock performance data across multiple platforms in a clean dark UI.
+<img width="839" height="878" alt="Screenshot 2026-04-28 at 11 12 44" src="https://github.com/user-attachments/assets/09eeb319-d0ac-4bc3-8f81-9cbcfb5eec5c" />
 
 ## Live Demo
 https://kenny-harper-social-dashboard.netlify.app
+
+## Intro
+A social media analytics dashboard built with React, TypeScript and Vite. Displays mock performance data across multiple platforms in a clean dark UI.
 
 ## Features
 - Platform cards for Twitter/X, Instagram, YouTube and LinkedIn
